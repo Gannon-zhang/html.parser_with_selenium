@@ -21,9 +21,9 @@ from selenium.common.exceptions import TimeoutException,NoSuchElementException
 
 from Tools import *
 
-logging.basicConfig(level=logging.INFO,format='%(asctime)s %(filename)s[line:(lineno)d]%(levelname)s %(message)s',datefmt='%a,%d %b %Y %H:%M:%S',filename='logging.log',filemode='w')
+logging.basicConfig(level=logging.INFO,format='%(asctime)s %(filename)s[line:(lineno)d]%(levelname)s %(message)s',datefmt='%a,%d %b %Y %H:%M:%S')
 
-class Broswer():
+class Broswer(object):
     def __init__(self,strUrl,strBroswer='Chrome'):
         paraLegalityCheck({str:strUrl,str:strBroswer})
         if strBroswer == 'IE':
